@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <title>URL Monitor</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="dashboard.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">GITHUB ACTIONS · 5-MINUTE CHECKS</p>
+        <h1>URL Monitor</h1>
+        <p class="subtitle">Availability, response time, and check history.</p>
+      </div>
+      <button id="refresh-button" type="button">Refresh data</button>
+    </header>
+
+    <section class="summary-grid" aria-label="Monitoring summary">
+      <article class="summary-card"><span>Monitored URLs</span><strong id="url-count">—</strong></article>
+      <article class="summary-card"><span>Latest checks UP</span><strong id="up-count">—</strong></article>
+      <article class="summary-card"><span>Latest checks DOWN</span><strong id="down-count">—</strong></article>
+      <article class="summary-card"><span>Overall availability</span><strong id="uptime">—</strong></article>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div><h2>Current status</h2><p>Latest recorded result for each configured URL.</p></div>
+        <span id="updated-at" class="muted">Waiting for data…</span>
+      </div>
+      <div id="status-cards" class="status-grid">
+        <p class="empty">Loading monitoring history…</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <div><h2>Check history</h2><p>Most recent checks appear first.</p></div>
+        <label class="filter-label" for="result-filter">Result
+          <select id="result-filter">
+            <option value="ALL">All</option>
+            <option value="UP">UP</option>
+            <option value="DOWN">DOWN</option>
+          </select>
+        </label>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Time (UTC)</th><th>URL</th><th>Status</th>
+              <th>Response</th><th>Result</th><th>Error</th>
+            </tr>
+          </thead>
+          <tbody id="history-body">
+            <tr><td colspan="6" class="empty">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-footer"><span id="row-count">0 records</span><span>Source: history.csv</span></div>
+    </section>
+
+    <footer>
+      <span>Checks run on GitHub Actions. Dashboard hosted on GitHub Pages.</span>
+      <a href="https://github.com/features/actions" target="_blank" rel="noreferrer">About GitHub Actions</a>
+    </footer>
+    <p id="error-message" class="error-message" role="status"></p>
+  </main>
+</body>
+</html>

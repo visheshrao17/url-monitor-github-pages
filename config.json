@@ -1,0 +1,7 @@
+{
+  "urls": [
+    "https://shop-smart-6srl.onrender.com/api/health",
+    "https://resume-builder-erer.onrender.com/api/health"
+  ],
+  "timeout_seconds": 30
+}
