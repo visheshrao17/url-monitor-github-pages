@@ -25,3 +25,5 @@ timestamp_utc,url,status_code,response_time_ms,result,error
 2026-10-27T11:00:15+00:00,https://resume-builder-erer.onrender.com/api/health,200,23008.74,UP,
 2026-10-27T16:14:17+00:00,https://shop-smart-6srl.onrender.com/api/health,,30086.76,DOWN,Timeout after 30s
 2026-10-27T16:14:47+00:00,https://resume-builder-erer.onrender.com/api/health,,30081.07,DOWN,Timeout after 30s
+2026-10-27T20:42:45+00:00,https://shop-smart-6srl.onrender.com/api/health,200,25245.23,UP,
+2026-10-27T20:43:08+00:00,https://resume-builder-erer.onrender.com/api/health,200,22532.83,UP,
